@@ -1,4 +1,4 @@
-package lesson16.web;
+package Calculator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;

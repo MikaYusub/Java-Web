@@ -31,7 +31,6 @@ public class CalcServlet extends HttpServlet {
         Optional<Integer> p1o = convert_i(p1);
         Optional<Integer> p2o = convert_i(p2);
         Optional<String> opo = wrap(op);
-
         return opo.flatMap(o -> p1o.flatMap(i1 -> p2o.flatMap(i2 -> {
             switch (o) {
                 case "plus":   return Optional.of(i1 + i2);
@@ -51,7 +50,7 @@ public class CalcServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req,
-                         HttpServletResponse resp) throws ServletException, IOException {
+                         HttpServletResponse resp) throws IOException {
 
         PrintWriter writer = resp.getWriter();
         writer.printf("Calculator:%s", calc(

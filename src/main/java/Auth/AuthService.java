@@ -16,5 +16,4 @@ public class AuthService implements Auth {
     return data.containsKey(login)
         && data.get(login).equals(paswd);
   }
-
 }
